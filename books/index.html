@@ -1,8 +1,9 @@
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>kirara&#39;s blog</title>
+<title>我的阅读 | kirara&#39;s blog</title>
 <meta name="description" content="温故而知新" />
 <link rel="shortcut icon" href="https://kiraraty.github.io/favicon.ico">
 <link rel="stylesheet" href="https://kiraraty.github.io/styles/main.css">
@@ -14,6 +15,9 @@
 <script src="https://kiraraty.github.io/media/js/view-image.min.js"></script>
 <script src="https://kiraraty.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://kiraraty.github.io/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js'></script>
   </head>
   <body>
     <!-- start: #wrapper -->
@@ -33,7 +37,7 @@
 
             <nav class="main-nav grid-container grid-parent">
               <ul id="menu-header" class="menu gradient-effect">
-                <li class="current-menu-item"><a href="https://kiraraty.github.io" class="menu">首页</a></li>
+                <li class=""><a href="https://kiraraty.github.io" class="menu">首页</a></li>
                 
                   <li class="" >
                     <a href="/" class="menu">
@@ -85,106 +89,13 @@
         </div>
       </div>
 
-      <main id="home" class="main">
+      <main id="friends" class="main fullcover no-sidebar content">
         <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
-        <div class="row">
-          <div class="content-wrapper grid-posts content">
-                
-            <!-- start: .articles -->
-            
-              
-              
-              <div class="articles columns-3">
-                
-                <article class="bgstyle grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry" style="">
-                  <div class="article-wrapper  cover" style="background-image: url('');">
-                  <header>
-                    
-                    <div class="meta">
-                      <time datetime="2021-08-13"><i class="fa fa-calendar"></i><span class="lately">15 天前</span></time>
-                      <div class="clear"></div>
-                    </div>
-                    <h1 class="title main-title gradient-effect"><a href="https://kiraraty.github.io/post/zheng-ze-jian-dan-zong-jie/">正则简单总结</a></h1>
-                  </header>
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://kiraraty.github.io/images/avatar.png');"></span>
-                      <span class="author-name">kirara&#39;s blog</span>
-                    </a>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="overlay"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://kiraraty.github.io/post/hello-gridea/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://kiraraty.github.io/post-images/hello-gridea.png');"></span>
-                        </a>
-                        
-                        <div class="tags absolute">
-                          <a href="https://kiraraty.github.io/tag/cdQWnIvCL/" class="ctag ctag-1 ctag-cdQWnIvCL">Gridea</a>
-                        </div>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2018-12-12"><i class="fa fa-calendar"></i><span class="lately">3 年前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://kiraraty.github.io/post/hello-gridea/">Hello Gridea</a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://kiraraty.github.io/images/avatar.png');"></span>
-                      <span class="author-name">kirara&#39;s blog</span>
-                    </a>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              <div class="clear"></div>
-              <div class="separator last hide-on-tablet hide-on-mobile"></div>
-            </div>
-            <!-- end: .articles -->
-            
-                        <div class="epcl-pagination section">
-              <div class="nav">
-                
-                
-              </div>
-            </div>
-
-            
-          </div>
-          </div>
+        <div class="epcl-page-wrapper">
+          <div class="section-content" style="margin-top:3em;"></div>
+        </div>
         </div>
       </main>
-
         <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
@@ -302,6 +213,15 @@
 
         
 
+    <script>
+    new Bmdb({
+      type: 'books',
+      selector: '.section-content',
+      secret: '',
+      noMoreText: '没有更多数据了',
+      limit: 30
+    })
+    </script>
     </div>
     <!-- end: #wrapper -->
   </body>
