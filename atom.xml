@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kiraraty.github.io</id>
     <title>kirara&apos;s blog</title>
-    <updated>2021-08-28T11:24:59.653Z</updated>
+    <updated>2021-08-28T11:31:03.312Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kiraraty.github.io"/>
     <link rel="self" href="https://kiraraty.github.io/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://kiraraty.github.io/images/avatar.png</logo>
     <icon>https://kiraraty.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, kirara&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[http协议]]></title>
+        <id>https://kiraraty.github.io/post/http-xie-yi/</id>
+        <link href="https://kiraraty.github.io/post/http-xie-yi/">
+        </link>
+        <updated>2021-08-28T11:28:59.000Z</updated>
+        <content type="html"><![CDATA[<p>#####基础</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Promise基础]]></title>
+        <id>https://kiraraty.github.io/post/promise-ji-chu/</id>
+        <link href="https://kiraraty.github.io/post/promise-ji-chu/">
+        </link>
+        <updated>2021-08-28T11:28:08.000Z</updated>
+        <content type="html"><![CDATA[<p>基础</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[正则简单总结]]></title>
         <id>https://kiraraty.github.io/post/zheng-ze-jian-dan-zong-jie/</id>
