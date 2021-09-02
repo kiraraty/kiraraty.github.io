@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kiraraty.github.io</id>
     <title>kirara&apos;s blog</title>
-    <updated>2021-09-02T09:53:01.544Z</updated>
+    <updated>2021-09-02T09:54:32.547Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kiraraty.github.io"/>
     <link rel="self" href="https://kiraraty.github.io/atom.xml"/>
@@ -39,9 +39,9 @@ while (true) {
     }
   } 
 }
-
-所以JavaScript代码的整个运行过程是，先运行现在部分的代码，当事件循环队列中有回调时，就依次执行回调函数，当事件循环队列中没有回调时，就进入不活跃阶段，继续等待有回调函数的注入（可以参考下图）
-[](https://kiraraty.github.io/post-images/1630576323369.png)</code></pre>
+</code></pre>
+<p>所以JavaScript代码的整个运行过程是，先运行现在部分的代码，当事件循环队列中有回调时，就依次执行回调函数，当事件循环队列中没有回调时，就进入不活跃阶段，继续等待有回调函数的注入（可以参考下图）<br>
+<img src="https://kiraraty.github.io/post-images/1630576408288.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
