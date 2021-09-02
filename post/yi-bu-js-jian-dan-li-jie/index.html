@@ -1,9 +1,8 @@
-<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的观影 | kirara&#39;s blog</title>
+<title>异步js简单理解 | kirara&#39;s blog</title>
 <meta name="description" content="温故而知新" />
 <link rel="shortcut icon" href="https://kiraraty.github.io/favicon.ico">
 <link rel="stylesheet" href="https://kiraraty.github.io/styles/main.css">
@@ -16,13 +15,13 @@
 <script src="https://kiraraty.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://kiraraty.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js'></script>
+    <meta name="description" content="异步
+所谓的异步代码其实就是非现在运行的代码，或者说在将来某个时刻会执行的代码；在JavaScript中，有一部分代码是会在主线程（JavaScript是单线程的，只有主线程）运行时就运行的代码（现在运行的代码），而另外一部分则放到事件循环..." />
+    <meta name="keywords" content="" />
+    <script src="https://kiraraty.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://kiraraty.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -89,14 +88,95 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-09-02"><i class="fa fa-calendar"></i><span class="lately">4 分钟前</span></time>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+              </div>
+              <h1 class="title ularge white bold">异步js简单理解</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>异步<br>
+所谓的异步代码其实就是非现在运行的代码，或者说在将来某个时刻会执行的代码；在JavaScript中，有一部分代码是会在主线程（JavaScript是单线程的，只有主线程）运行时就运行的代码（现在运行的代码），而另外一部分则放到事件循环队列中运行的代码，而这部分代码就是异步代码；而异步代码永远会在现在运行的代码运行之后才有可能被执行。</p>
+<p>注意：异步也是单线程的，区别只是在单线程上的执行时时间的早晚差异</p>
+<p>事件循环队列<br>
+这个是异步实现的基础，对于其模型，可以想像一下，有一个管口向下的长长的输送管子，里面依次地紧挨着地排了许多的货物，每次运送时，管子口的那个货物就会被输出，直到管子没有货物，而当又有货物从管子上口装入时，就又有货物输出。这个可以类比我们的事件循环队列，上面例子的管子就是我们的事件循环队列，而里面的货物就是一个个回调事件函数，而每次运送就是事件循环队列的每次tick，每次运送时就有一个货物被输出，就是对应了每次tick都有一个回调事件函数被调用执行；也就是说这个事件循环队列会永无休止地检测队列里有没有回调函数，有的话就执行，但一定是一个一个来的，不能插队。用伪代码表示这个事件循环队列：</p>
+<pre><code> // 事件循环队列
+let loop_queue = []
+
+//无休止地检查
+while (true) {
+  // 一次tick
+  if (loop_queue.length &gt; 0) {
+    // 取下第一个回调
+    let event = loop_queue.shift()
+    try {
+      // 尝试调用执行!
+      event()
+    } 
+    catch (err) {
+       console.err(err)
+    }
+  } 
+}
+
+所以JavaScript代码的整个运行过程是，先运行现在部分的代码，当事件循环队列中有回调时，就依次执行回调函数，当事件循环队列中没有回调时，就进入不活跃阶段，继续等待有回调函数的注入（可以参考下图）
+[](https://kiraraty.github.io/post-images/1630576323369.png)</code></pre>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://kiraraty.github.io/media/images/gridea.jpg');"></div>
+                 <a href="https://kiraraty.github.io/post/http-xie-yi/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-08-28">2021-08-28</time>
+                  <h4 class="title white no-margin">http协议</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://kiraraty.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+              </div>
+              <div class="clear"></div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -213,15 +293,9 @@
 
         
 
-    <script>
-    new Bmdb({
-      type: 'movies',
-      selector: '.section-content',
-      secret: '',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://kiraraty.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
