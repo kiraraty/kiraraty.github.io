@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kiraraty.github.io</id>
     <title>kirara&apos;s blog</title>
-    <updated>2021-09-02T10:21:21.755Z</updated>
+    <updated>2021-09-02T10:22:03.399Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kiraraty.github.io"/>
     <link rel="self" href="https://kiraraty.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>前端垃圾</subtitle>
     <logo>https://kiraraty.github.io/images/avatar.png</logo>
     <icon>https://kiraraty.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, kirara&apos;s blog</rights>
