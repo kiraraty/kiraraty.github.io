@@ -16,7 +16,11 @@
 <script src="https://kiraraty.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
     <meta name="description" content="基础
-" />
+const btns = document.querySelectorAll('button');
+
+        //第一个
+        btns[0].onclick = function(){
+            //..." />
     <meta name="keywords" content="" />
     <script src="https://kiraraty.github.io/media/js/waterfall.min.js"></script>
     <script src="https://kiraraty.github.io/media/js/prism.min.js"></script>
@@ -78,7 +82,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1630578120455" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1630748629592" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -93,7 +97,7 @@
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('/media/images/custom-featureImage.JPG');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2021-08-28"><i class="fa fa-calendar"></i><span class="lately">5 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2021-08-28"><i class="fa fa-calendar"></i><span class="lately">7 天前</span></time>
               
               <a href="https://kiraraty.github.io/post/promise-ji-chu/#comments" class="comments meta-info" title="">
                 <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/promise-ji-chu/"> </span>
@@ -116,6 +120,71 @@
               <section class="post-content">
                 <div class="text">
                   <p>基础</p>
+<pre><code class="language-js">const btns = document.querySelectorAll('button');
+
+        //第一个
+        btns[0].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'GET',
+                //URL
+                url: 'http://localhost:3000/posts/2',
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+        //添加一篇新的文章
+        btns[1].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'POST',
+                //URL
+                url: 'http://localhost:3000/posts',
+                //设置请求体
+                data: {
+                    title: &quot;今天天气不错, 还挺风和日丽的&quot;,
+                    author: &quot;张三&quot;
+                }
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+        //更新数据
+        btns[2].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'PUT',
+                //URL
+                url: 'http://localhost:3000/posts/3',
+                //设置请求体
+                data: {
+                    title: &quot;今天天气不错, 还挺风和日丽的&quot;,
+                    author: &quot;李四&quot;
+                }
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+        //删除数据
+        btns[3].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'delete',
+                //URL
+                url: 'http://localhost:3000/posts/3',
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+</code></pre>
 
                 </div>
                 <div class="clear"></div>
@@ -292,7 +361,7 @@ jQuery(document).ready(function($){
         </div>
 
         <div class="logo">
-          <a href="https://kiraraty.github.io"><img src="/media/images/gridea.png" alt=""></a>
+          <a href="https://kiraraty.github.io"><img src="/media/images/custom-footerLogo.png" alt=""></a>
         </div>
         <p class="published border-effect">
           ©2019 共 6 篇文章

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kiraraty.github.io</id>
     <title>kirara&apos;s blog</title>
-    <updated>2021-09-02T10:22:03.399Z</updated>
+    <updated>2021-09-04T09:44:57.809Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kiraraty.github.io"/>
     <link rel="self" href="https://kiraraty.github.io/atom.xml"/>
@@ -78,6 +78,71 @@ while (true) {
         </link>
         <updated>2021-08-28T11:28:08.000Z</updated>
         <content type="html"><![CDATA[<p>基础</p>
+<pre><code class="language-js">const btns = document.querySelectorAll('button');
+
+        //第一个
+        btns[0].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'GET',
+                //URL
+                url: 'http://localhost:3000/posts/2',
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+        //添加一篇新的文章
+        btns[1].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'POST',
+                //URL
+                url: 'http://localhost:3000/posts',
+                //设置请求体
+                data: {
+                    title: &quot;今天天气不错, 还挺风和日丽的&quot;,
+                    author: &quot;张三&quot;
+                }
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+        //更新数据
+        btns[2].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'PUT',
+                //URL
+                url: 'http://localhost:3000/posts/3',
+                //设置请求体
+                data: {
+                    title: &quot;今天天气不错, 还挺风和日丽的&quot;,
+                    author: &quot;李四&quot;
+                }
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+        //删除数据
+        btns[3].onclick = function(){
+            //发送 AJAX 请求
+            axios({
+                //请求类型
+                method: 'delete',
+                //URL
+                url: 'http://localhost:3000/posts/3',
+            }).then(response =&gt; {
+                console.log(response);
+            });
+        }
+
+</code></pre>
 ]]></content>
     </entry>
     <entry>
